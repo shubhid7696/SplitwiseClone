@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/splash/splash_screen.dart';
-
-void main() {
+import 'package:splitwise_clone/core/di_services/injections.dart';
+void main() async {
+  await initDependencies();
   runApp(const MyApp());
 }
 

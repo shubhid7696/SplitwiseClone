@@ -4,12 +4,13 @@ import 'package:splitwise_clone/res/app_styles.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/onBoard/presentation/onBoarding_screen.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/splash/bloc/splash_scr_bloc.dart';
 
+import '../../../core/di_services/injections.dart';
 import '../../../ui/widgets/image_widgets.dart';
 
 class SplashScreen extends StatelessWidget {
   SplashScreen({super.key});
 
-  final splashBloc = SplashScrBloc();
+  final splashBloc = dependencies<SplashScrBloc>();
 
   @override
   Widget build(BuildContext context) {

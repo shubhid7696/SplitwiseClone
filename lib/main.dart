@@ -5,6 +5,8 @@ void main() {
   runApp(const MyApp());
 }
 
+// TODO : implementing go routing
+// TODO : implementing getit for dependency injection
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

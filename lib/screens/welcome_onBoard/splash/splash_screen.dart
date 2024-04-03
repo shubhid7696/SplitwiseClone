@@ -1,7 +1,10 @@
-import 'package:flutter/material.dart';
+import 'package:splitwise_clone/res/app_imports.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:splitwise_clone/res/app_styles.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/onBoard/presentation/onBoarding_screen.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/splash/bloc/splash_scr_bloc.dart';
+
+import '../../../ui/widgets/image_widgets.dart';
 
 class SplashScreen extends StatelessWidget {
   SplashScreen({super.key});
@@ -29,13 +32,12 @@ class SplashScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(width: double.maxFinite,),
-                  Container(
-                    height: 200,
-                    width: 200,
-                    margin: const EdgeInsets.only(bottom: 30),
-                    color: Colors.red,
+                  const NetworkAndAssetImage(
+                    height: 300,
+                    width: 300,
+                    imagePath: AppImages.splashImage,
                   ),
-                  const Text("Splash Screen Title"),
+                  Text(AppStrings.splashTitle, style: AppStyles.splashTitle(),),
                   const SizedBox(height: 20,),
                   const CircularProgressIndicator(
                     backgroundColor: Colors.white,

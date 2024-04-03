@@ -9,10 +9,13 @@ Widget _page({
   required BuildContext context,
 }) {
   return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.start,
     children: [
-      Image.asset(
-        imageUrl,
+      Expanded(
+        flex: 2,
+        child: Image.asset(
+          imageUrl,
+        ),
       ),
       const SizedBox(height: 40),
       Text(
@@ -49,7 +52,7 @@ Widget _page({
                   }));
                 },
                 child: Text(
-                  'Skip',
+                  AppStrings.skipStr,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,

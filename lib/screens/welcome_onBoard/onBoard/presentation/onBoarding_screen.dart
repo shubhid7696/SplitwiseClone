@@ -3,14 +3,14 @@ import 'package:splitwise_clone/res/app_imports.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:splitwise_clone/screens/authenticate/register/register_screen.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/onBoard/bloc/onBoarding_bloc.dart';
+import '../../../../core/di_services/injections.dart';
 import '../../../authenticate/login/login_screen.dart';
 
 part 'widget/onBoarding_page.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   final pageController = PageController(initialPage: 0);
-  final onBoardingBloc = OnBoardingBloc();
-
+  final onBoardingBloc = dependencies<OnBoardingBloc>();
   OnBoardingScreen({super.key});
 
   @override

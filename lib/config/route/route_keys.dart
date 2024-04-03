@@ -15,4 +15,7 @@ class RouteKeys {
   static const String signUpScreen = '/signUpScreen';
   static const String phoneAuthScreen = '/phoneAuthScreen';
 
+  // ==========  HOME SCREEN  ==========
+  static const String homeScreen = '/homeScreen';
+
 }

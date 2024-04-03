@@ -1,5 +1,5 @@
 class AppStrings {
-  static const String appName = "Not decided yet";
+  static const String appName = "Splitwise Clone";
   static const String splashTitle = "Manage your expense";
 
   static const String onBoardingTitle1 = "Boost Productivity";

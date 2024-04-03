@@ -1,9 +1,6 @@
-import 'package:splitwise_clone/res/app_imports.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:splitwise_clone/res/app_styles.dart';
-import 'package:splitwise_clone/screens/welcome_onBoard/onBoard/presentation/onBoarding_screen.dart';
-import 'package:splitwise_clone/screens/welcome_onBoard/splash/bloc/splash_scr_bloc.dart';
 
+import 'package:splitwise_clone/res/app_imports.dart';
+import 'package:splitwise_clone/screens/welcome_onBoard/splash/bloc/splash_scr_bloc.dart';
 import '../../../core/di_services/injections.dart';
 import '../../../ui/widgets/image_widgets.dart';
 
@@ -21,8 +18,7 @@ class SplashScreen extends StatelessWidget {
         child: BlocListener<SplashScrBloc, SplashScrState>(
           listener: (context, state) {
             if (state is SplashLoaded) {
-              Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (context) => OnBoardingScreen()));
+              context.go(RouteKeys.onBoardingScreen);
             }
           },
           child: Scaffold(

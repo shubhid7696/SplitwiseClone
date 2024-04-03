@@ -1,7 +1,5 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:splitwise_clone/res/app_imports.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:splitwise_clone/screens/authenticate/register/register_screen.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/onBoard/bloc/onBoarding_bloc.dart';
 import '../../../../core/di_services/injections.dart';
 import '../../../authenticate/login/login_screen.dart';
@@ -11,11 +9,11 @@ part 'widget/onBoarding_page.dart';
 class OnBoardingScreen extends StatelessWidget {
   final pageController = PageController(initialPage: 0);
   final onBoardingBloc = dependencies<OnBoardingBloc>();
+
   OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     var onBoardingDataList = onBoardingBloc.state.onBoardingDataList;
 
     return Scaffold(
@@ -82,12 +80,13 @@ class OnBoardingScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(5.0)),
                         ),
                       ),
-                      const Expanded(child: SizedBox(),),
+                      const Expanded(
+                        child: SizedBox(),
+                      ),
                       ElevatedButton(
                           onPressed: () {
-                            if(state.pageIndex == 2){
-                              Navigator.pushReplacement(
-                                  context, MaterialPageRoute(builder: (context) => RegisterScreen()));
+                            if (state.pageIndex == 2) {
+                              context.go(RouteKeys.signUpScreen);
                             }
                             pageController.nextPage(
                                 duration: const Duration(milliseconds: 300),

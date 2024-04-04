@@ -86,7 +86,7 @@ class OnBoardingScreen extends StatelessWidget {
                       ElevatedButton(
                           onPressed: () {
                             if (state.pageIndex == 2) {
-                              context.go(RouteKeys.signUpScreen);
+                              context.replace(RouteKeys.signUpScreen);
                             }
                             pageController.nextPage(
                                 duration: const Duration(milliseconds: 300),

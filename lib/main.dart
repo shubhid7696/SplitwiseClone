@@ -1,16 +1,26 @@
-import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:splitwise_clone/res/app_imports.dart';
-import 'package:splitwise_clone/screens/welcome_onBoard/splash/splash_screen.dart';
 import 'package:splitwise_clone/core/di_services/injections.dart';
 
-import 'config/route/app_routes.dart';
+
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: 'AIzaSyB6zwaktmTZxjY37x73W4mohT5lnkC0IAQ',
+          appId: '1:297647669570:android:8f4db1749347c79c2288db',
+          messagingSenderId: '',
+          projectId: 'splitwiseclone-6597f'
+      )
+  );
+
   await initDependencies();
+
   runApp(const MyApp());
 }
 
-// TODO : implementing go routing
-// TODO : implementing getit for dependency injection
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

@@ -18,10 +18,11 @@ class SplashScreen extends StatelessWidget {
         child: BlocListener<SplashScrBloc, SplashScrState>(
           listener: (context, state) {
             if (state is SplashLoaded) {
-              context.go(RouteKeys.onBoardingScreen);
+              context.replace(RouteKeys.onBoardingScreen);
             }
           },
           child: Scaffold(
+            backgroundColor: primaryBackgroundColor,
             body: SafeArea(
               child: Column(
                 mainAxisSize: MainAxisSize.max,

@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:splitwise_clone/screens/authenticate/phone_auth/presentation/phone_auth_screen.dart';
 import 'package:splitwise_clone/screens/authenticate/register/register_screen.dart';
 import 'package:splitwise_clone/screens/home/presentation/home_screen.dart';
 import 'package:splitwise_clone/screens/welcome_onBoard/onBoard/presentation/onBoarding_screen.dart';
@@ -28,6 +29,12 @@ GoRouter appRoutes = GoRouter(
         path: RouteKeys.signUpScreen,
         builder: (BuildContext context, GoRouterState state){
           return RegisterScreen();
+        }
+    ),
+    GoRoute(
+        path: RouteKeys.phoneAuthScreen,
+        builder: (BuildContext context, GoRouterState state){
+          return PhoneAuthScreen();
         }
     ),
     GoRoute(

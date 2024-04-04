@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "297647669570",
+    "project_id": "splitwiseclone-6597f",
+    "storage_bucket": "splitwiseclone-6597f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297647669570:android:8f4db1749347c79c2288db",
+        "android_client_info": {
+          "package_name": "shubh.expanse_split.splitwise_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6zwaktmTZxjY37x73W4mohT5lnkC0IAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

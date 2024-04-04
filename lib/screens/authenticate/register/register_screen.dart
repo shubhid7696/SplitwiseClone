@@ -95,9 +95,9 @@ class MyForm extends StatelessWidget {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        context.go(RouteKeys.homeScreen);
+                        context.replace(RouteKeys.phoneAuthScreen);
                       },
-                      child: const Text("Nav to home")),
+                      child: const Text("Nav to phone auth")),
                 ],
               ),
             ),
